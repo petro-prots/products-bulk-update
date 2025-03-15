@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @by Petro Prots
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="POST" url="/V1/products/update_attributes/bulk">
+        <service class="PetroProts\ProductsBulkUpdate\Api\UpdateProductAttributesActionInterface" method="execute"/>
+        <resources>
+            <resource ref="PetroProts_ProductsBulkUpdate::update_attributes_bulk"/>
+        </resources>
+    </route>
+</routes>
