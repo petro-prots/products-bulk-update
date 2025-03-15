@@ -7,14 +7,18 @@ There is only one action available:
 
 `POST V1/products/update_attributes/bulk`.
 Arguments:
-- `products`: List of products' attributes data to update. Example: ```json
+- `products`: List of products' attributes data to update.
+  Example:
+  ```json
   {
       "id": 1,
       "attribute": "name",
       "value": "New name"
   }
   ```
-- `scopeData`: Data about the current working scope. Example: ```json
+- `scopeData`: Data about the current working scope.
+  Example:
+  ```json
   {
     "store_id": 1,
     "website_id": 1,
