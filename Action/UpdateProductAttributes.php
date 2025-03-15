@@ -52,8 +52,10 @@ class UpdateProductAttributes implements UpdateProductAttributesActionInterface
     /**
      * @inheritDoc
      */
-    public function execute(array $products, ?ProductsUpdateScopeDataInterface $scopeData = null): ProductsUpdateResultInterface
-    {
+    public function execute(
+        array $products,
+        ?ProductsUpdateScopeDataInterface $scopeData = null
+    ): ProductsUpdateResultInterface {
         $bulkUuid = $this->identityService->generateId();
         $bulkDescription = __('Update requested products\' attributes');
 
@@ -108,7 +110,7 @@ class UpdateProductAttributes implements UpdateProductAttributesActionInterface
      * @return ProductsUpdateScopeDataInterface
      * @throws NoSuchEntityException
      */
-    protected function hydrateScopeData(?ProductsUpdateScopeDataInterface $scopeData): ProductsUpdateScopeDataInterface
+    private function hydrateScopeData(?ProductsUpdateScopeDataInterface $scopeData): ProductsUpdateScopeDataInterface
     {
         if (!$scopeData) {
             $scopeData = $this->scopeDataFactory->create();

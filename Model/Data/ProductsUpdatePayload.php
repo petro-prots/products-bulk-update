@@ -31,8 +31,7 @@ class ProductsUpdatePayload extends DataObject implements ProductsUpdatePayloadI
      */
     public function setId(int $id): self
     {
-        $this->setData(static::ID, $id);
-        return $this;
+        return $this->setData(static::ID, $id);
     }
 
     /**
@@ -48,8 +47,7 @@ class ProductsUpdatePayload extends DataObject implements ProductsUpdatePayloadI
      */
     public function setAttribute(?string $attribute): self
     {
-        $this->setData(static::ATTRIBUTE, $attribute);
-        return $this;
+        return $this->setData(static::ATTRIBUTE, $attribute);
     }
 
     /**
@@ -65,7 +63,6 @@ class ProductsUpdatePayload extends DataObject implements ProductsUpdatePayloadI
      */
     public function setValue(string $value): self
     {
-        $this->setData(static::VALUE, $value);
-        return $this;
+        return $this->setData(static::VALUE, $value);
     }
 }

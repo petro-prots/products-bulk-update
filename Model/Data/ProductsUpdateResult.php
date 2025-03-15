@@ -26,8 +26,7 @@ class ProductsUpdateResult extends DataObject implements ProductsUpdateResultInt
      */
     public function setIsSuccess(bool $isSuccess): self
     {
-        $this->setData(static::IS_SUCCESS, $isSuccess);
-        return $this;
+        return $this->setData(static::IS_SUCCESS, $isSuccess);
     }
 
     /**
@@ -43,8 +42,7 @@ class ProductsUpdateResult extends DataObject implements ProductsUpdateResultInt
      */
     public function setProducts(array $products): self
     {
-        $this->setData(static::PRODUCTS, $products);
-        return $this;
+        return $this->setData(static::PRODUCTS, $products);
     }
 
     /**
@@ -60,8 +58,7 @@ class ProductsUpdateResult extends DataObject implements ProductsUpdateResultInt
      */
     public function setFailedProducts(array $failedProducts): self
     {
-        $this->setData(static::FAILED_PRODUCTS, $failedProducts);
-        return $this;
+        return $this->setData(static::FAILED_PRODUCTS, $failedProducts);
     }
 
     /**
@@ -77,7 +74,6 @@ class ProductsUpdateResult extends DataObject implements ProductsUpdateResultInt
      */
     public function setQueueId(string $queueId): self
     {
-        $this->setData(static::QUEUE_ID, $queueId);
-        return $this;
+        return $this->setData(static::QUEUE_ID, $queueId);
     }
 }
