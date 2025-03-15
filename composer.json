@@ -1,6 +1,6 @@
 {
   "name": "petro-prots/module-products-bulk-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Products Bulk update extension by Petro Prots",
   "type": "magento2-module",
   "require": {
