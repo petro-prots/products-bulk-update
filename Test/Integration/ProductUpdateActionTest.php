@@ -11,6 +11,7 @@ namespace PetroProts\ProductsBulkUpdate\Test\Integration;
 use PHPUnit\Framework\TestCase;
 use Magento\TestFramework\Helper\Bootstrap;
 use Magento\Framework\ObjectManagerInterface;
+use Magento\Framework\Bulk\BulkSummaryInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\TestFramework\MessageQueue\PublisherConsumerController;
 use Magento\TestFramework\MessageQueue\PreconditionFailedException;
@@ -167,7 +168,7 @@ class ProductUpdateActionTest extends TestCase
     public function testProductUpdateCreatesQueue(ProductsUpdateResultInterface $productsUpdateResult)
     {
         $collection = $this->_objectManager->create(Collection::class);
-        $collection->addFieldToFilter('uuid', $productsUpdateResult->getQueueId());
+        $collection->addFieldToFilter(BulkSummaryInterface::BULK_ID, $productsUpdateResult->getQueueId());
 
         $this->assertEquals(1, $collection->getSize());
     }

@@ -26,7 +26,6 @@ class ProductsUpdateInput extends DataObject implements ProductsUpdateInputInter
      */
     public function setProducts(?array $products): self
     {
-        $this->setData(static::PRODUCTS, $products);
-        return $this;
+        return $this->setData(static::PRODUCTS, $products);
     }
 }

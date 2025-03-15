@@ -29,8 +29,7 @@ class ProductsUpdateScopeData extends DataObject implements ProductsUpdateScopeD
      */
     public function setStoreId(int $storeId): ProductsUpdateScopeDataInterface
     {
-        $this->setData(static::STORE_ID, $storeId);
-        return $this;
+        return $this->setData(static::STORE_ID, $storeId);
     }
 
     /**
@@ -46,7 +45,6 @@ class ProductsUpdateScopeData extends DataObject implements ProductsUpdateScopeD
      */
     public function setWebsiteId(int $websiteId): ProductsUpdateScopeDataInterface
     {
-        $this->setData(static::WEBSITE_ID, $websiteId);
-        return $this;
+        return $this->setData(static::WEBSITE_ID, $websiteId);
     }
 }
