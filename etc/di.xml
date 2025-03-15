@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @by Petro Prots
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="PetroProts\ProductsBulkUpdate\Api\UpdateProductAttributesActionInterface"
+                type="PetroProts\ProductsBulkUpdate\Action\UpdateProductAttributes"/>
+    <preference for="PetroProts\ProductsBulkUpdate\Api\QueueManagerInterface"
+                type="PetroProts\ProductsBulkUpdate\Model\Manager\QueueManager"/>
+
+    <preference for="PetroProts\ProductsBulkUpdate\Api\Data\ProductsUpdateScopeDataInterface"
+                type="PetroProts\ProductsBulkUpdate\Model\Data\ProductsUpdateScopeData"/>
+    <preference for="PetroProts\ProductsBulkUpdate\Api\Data\ProductsUpdatePayloadInterface"
+                type="PetroProts\ProductsBulkUpdate\Model\Data\ProductsUpdatePayload"/>
+    <preference for="PetroProts\ProductsBulkUpdate\Api\Data\ProductsUpdateResultInterface"
+                type="PetroProts\ProductsBulkUpdate\Model\Data\ProductsUpdateResult"/>
+
+    <preference for="PetroProts\ProductsBulkUpdate\Api\PayloadValidatorInterface"
+                type="PetroProts\ProductsBulkUpdate\Model\Validator\PayloadValidatorChain"/>
+
+    <type name="PetroProts\ProductsBulkUpdate\Model\Validator\PayloadValidatorChain">
+        <arguments>
+            <argument name="productValidators" xsi:type="array">
+                <item name="product_validator" xsi:type="object">PetroProts\ProductsBulkUpdate\Model\Validator\ProductValidator</item>
+                <item name="attribute_validator" xsi:type="object">PetroProts\ProductsBulkUpdate\Model\Validator\AttributeValidator</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

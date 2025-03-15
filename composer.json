@@ -1,0 +1,27 @@
+{
+  "name": "petro-prots/module-products-bulk-update",
+  "version": "1.0.0",
+  "description": "Products Bulk update extension by Petro Prots",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "authors": [
+    {
+      "name": "Petro Prots",
+      "role": "owner",
+      "email": "petroprotsdev@gmail.com"
+    }
+  ],
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "PetroProts\\ProductsBulkUpdate\\": ""
+    }
+  }
+}
